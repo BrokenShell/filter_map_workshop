@@ -6,17 +6,24 @@ from main import is_odd
 arr = list(range(10))
 print(arr)
 
-# 1. This is ugly - just don't
-looped = []
+# 1. This is particularly ugly - don't do this, avoid indexing when you can
+looped_arr = []
+for i in range(len(arr)):
+    if is_odd(arr[i]):
+        looped_arr.append(arr[i])
+print(looped_arr)
+
+# 2. This is slightly less ugly - don't do this either, unless you have to
+looped_arr2 = []
 for val in arr:
     if is_odd(val):
-        looped.append(val)
-print(looped)
+        looped_arr2.append(val)
+print(looped_arr2)
 
-# 2. This is beautiful and what most hiring managers want to see
+# 3. This is beautiful and what most hiring managers want to see
 filtered_arr = list(filter(is_odd, arr))
 print(filtered_arr)
 
-# 3. This is very beautiful and my preferred methodology
+# 4. This is very beautiful and my preferred methodology
 comp_arr = [val for val in arr if is_odd(val)]
 print(comp_arr)
