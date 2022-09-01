@@ -6,14 +6,14 @@ from main import is_odd
 arr = list(range(10))
 print(arr)
 
-# 1. This is particularly ugly - don't do this, avoid indexing when you can
+# 1. This is particularly ugly - don't do this, always avoid indexing
 looped_arr = []
 for i in range(len(arr)):
     if is_odd(arr[i]):
         looped_arr.append(arr[i])
 print(looped_arr)
 
-# 2. This is slightly less ugly - don't do this either, unless you have to
+# 2. This is slightly less ugly - don't do this either
 looped_arr2 = []
 for val in arr:
     if is_odd(val):

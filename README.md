@@ -1,5 +1,8 @@
 # DS Workshop: Map, Filter and Friends
 
+## 0. Icebreaker & Warmup
+Greet people. Smile. Foreshadow the result.
+
 ## 1. `implementation.py`
 Shows possible implementations for `map` and `filter`. This is here to help us understand the signatures of these builtin functions. This code is not intended to be used in production.
 
